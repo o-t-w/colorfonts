@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    
+
+    <style>
+
+@font-face {
+    font-family: 'abelone';
+    src: url('Abelone-FREE.otf')
+    format('opentype');
+}
+
+    @font-face {
+    font-family: 'bungee';
+    src: url('BungeeColor-Regular_svg.woff2')
+    format('woff2');
+}
+
+@font-face {
+    font-family: 'emoji';
+    src: url('emojione-svg.woff2')
+    format('woff2');
+}
+
+@font-face {
+    font-family: 'gilbert';
+    src: url('Gilbert-Color Bold-Preview_1004.otf')
+    format('opentype');
+}
+
+@font-face {
+    font-family: 'letterboard';
+    src: url('LetterBoard_Orange.otf')
+    format('opentype');
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.emoji {
+    font-family: 'emoji';
+}
+
+.gilbert {
+    font-family: 'gilbert';
+    letter-spacing: -3px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bungee {
+    font-family: 'bungee';
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    width: -moz-min-content;
+padding: 0;
+margin: 0;
+}
+
+.letterboard {
+    font-family: 'letterboard';
+    text-transform: uppercase;
+    font-size: calc(8vh + 8vw);
+}
+
+.big {
+    font-size: calc(14vmin + 13vmax);
+}
+
+.medium {
+    font-size: 100px;
+}
+
+.horizontal {
+    text-orientation: initial ;
+    writing-mode: horizontal-tb;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    width: -moz-fit-content;
+    grid-template-rows: repeat(3, auto);
+    margin: 0 auto;
+}
+
+.bungee.horizontal.two {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.bungee.three {
+    grid-row: 3;
+    grid-column: 3;
+}
+
+.vh {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.m-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.min-content {
+    width: -moz-min-content;
+}
+
+.fit-content {
+    width: -moz-fit-content;
+    margin: auto;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    line-height: 0;
+    padding: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.fs-80 {
+    font-size: 80px;
+}
+
+.fs-70 {
+    font-size: calc(4vh + 4vw);
+}
+
+body, html {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+	position: relative;
+	scroll-snap-type: mandatory;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media screen and (max-width: 700px) {
+    .smallscreen-column {
+    flex-direction: column;
+}
+}
+
+body > * {
+    scroll-snap-align: center;
+}
+
+.bungeeview, .gilbertview, .emojiview, .worldview, .helloview, .letterboardview {
+    height: 150px;
+    width: 150px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.bungeeview {
+    background-image: -moz-element(#bungee);
+}
+
+.gilbertview {
+    background-image: -moz-element(#gilbert);
+}
+
+.emojiview {
+    background-image: -moz-element(#emoji);
+}
+
+.helloview {
+    background-image: -moz-element(#hello);
+}
+
+.worldview {
+    background-image: -moz-element(#world);
+}
+
+.letterboardview {
+    background-image: -moz-element(#letterboard);
+}
+
+.abelone {
+    font-family: 'abelone';
+    font-size: calc(4vh + 4vw);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: calc(150px + 17px);
+}
+
+main {
+    padding-left: calc(150px + 17px);
+}
+
+#world a {
+    display: block;
+}
+
+#world {
+    flex-direction: column;
+}
+
+.sidebar > * {
+    display: block;
+}
+    </style>
+</head>
+<body>
+<!--  <h1>1234567890</h1>
+    <h2 class="italic">1234567890</h2>
+    <h3>ABCDEFGHIJKLMNOPQRSTUVWXYZ</h3>
+    <h3 class="italic">ABCDEFGHIJKLMNOPQRSTUVWXYZ</h3>
+    <h3>abcdefghijklmnopqrstuvwxyz</h3>
+    <h3 class="italic">abcdefghijklmnopqrstuvwxyz</h3>
+    <h3>!@£#%^&*()_+-=[]{};',."</h3>
+    <h3 class="italic">!@£#%^&*()_+-=[]{};',."</h3> -->
+
+    <div class="sidebar">
+        <a href="#bungee"><div class="bungeeview"></div></a>
+        <a href="#gilbert"><div class="gilbertview"></div></a>
+        <a href="#emoji"><div class="emojiview"></div></a>
+        <a href="#hello"><div class="helloview"></div></a>
+        <a href="#letterboard"><div class="letterboardview"></div></a>
+    </div>
+
+<main>
+        <div class="vh">
+                <div class="grid fs-70" id="bungee">
+                    <h4 class="bungee" contenteditable>get</h4>
+                    <h4 class="bungee horizontal two" contenteditable>ready</h4>
+                    <h4 class="bungee three" contenteditable>for</h4>
+                </div>
+            </div>
+            <h3 class="vh gilbert fs-70" id="gilbert" contenteditable>color typography on the web</h3>
+            
+            <p class="emoji big vh fit-content smallscreen-column" id="emoji"> <span>😎</span> <span>😍</span> <span>😜</span> </p>
+            
+            <div class="vh abelone" id="hello" contenteditable>
+            <h2>hello<br> 
+                world!</h2>
+            </div>
+
+            <div class="vh letterboard" id="letterboard" contenteditable>
+                edit me
+            </div>
+            
+            <div class="vh" id="world">
+                <a href="https://drafts.csswg.org/css-fonts-4/">Fonts!</a> 
+                <a href="https://drafts.csswg.org/cssom-view/#propdef-scroll-behavior">Smooth Scrolling!</a> 
+                <a href="https://www.w3.org/TR/css-images-4/#element-notation">background-image: element() !</a>
+                </div>
+</main>
+
+</body>
+</html>
