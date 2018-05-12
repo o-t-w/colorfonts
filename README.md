@@ -1,2 +1,1 @@
-# colorfonts
-A static demo site of color fonts experimenting with new CSS properties... (AN EXPERIMENT: very patchy browser support...)
+Works in Firefox... https://www.w3.org/TR/css-images-4/
